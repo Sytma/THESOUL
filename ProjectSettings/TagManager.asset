@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ground
+  - danger
+  - CHECKPOINT
+  - falldetector
+  - nextLevel
+  - previousLevel
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: background
+    uniqueID: 3301780107
+    locked: 0
+  - name: ground
+    uniqueID: 2992258211
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: payer
+    uniqueID: 1890446187
+    locked: 0
+  - name: 1
+    uniqueID: 3563967001
+    locked: 0
