@@ -23,15 +23,14 @@ public class DialogueManageur : MonoBehaviour
     }
     public void DisplayNextSentences ()
     {
-            if (sentences.Count == 0)
-            {
-                EndDialogue();
-                return;
-                   
-            }
-            string sentence = sentences.Dequeue();
-            Debug.Log(sentence);
+        if (sentences.Count == 0)
+        {
+            EndDialogue();
+            return;
 
+        }
+            string Sentence = sentences.Dequeue();
+            Debug.Log(Sentence);
     }
         void EndDialogue()
         {
