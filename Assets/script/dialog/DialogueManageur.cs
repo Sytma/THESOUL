@@ -9,6 +9,9 @@ public class DialogueManageur : MonoBehaviour
     {
         sentences = new Queue<string>();
     }
-
+    public void startDialogue (Dialogue dialogue)
+    {
+        Debug.Log("starting conversation with" + dialogue.name);
+    }
    
 }
