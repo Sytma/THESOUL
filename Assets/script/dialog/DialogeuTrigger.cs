@@ -7,8 +7,8 @@ public class DialogeuTrigger : MonoBehaviour
 
     public Dialogue dialogeu;
 
-    public void TriggerDialogeur()
+    public void TriggerDialogeu()
     {
-        FindObjectOfType<DialogueManageur>().startDialogue(dialogeu);
+        FindObjectOfType<DialogueManager>().startDialogue(dialogeu);
     }
 }

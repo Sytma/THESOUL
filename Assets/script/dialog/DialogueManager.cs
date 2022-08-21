@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueManageur : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
     void Start()
@@ -11,7 +11,7 @@ public class DialogueManageur : MonoBehaviour
     }
     public void startDialogue(Dialogue dialogue)
     {
-        Debug.Log("starting conversation with" + dialogue.name);
+        Debug.Log("starting conversation with " + dialogue.Name);
 
         sentences.Clear();
 
@@ -29,8 +29,10 @@ public class DialogueManageur : MonoBehaviour
             return;
 
         }
-            string Sentence = sentences.Dequeue();
+
+           string Sentence = sentences.Dequeue();
             Debug.Log(Sentence);
+        
     }
         void EndDialogue()
         {
