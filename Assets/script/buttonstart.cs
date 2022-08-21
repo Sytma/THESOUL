@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class buttonstart : MonoBehaviour
 {
-    [SerializeField] private string newGameLevel = "Level1";
     // Start is called before the first frame update
-    public void newGameButton()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+  
+  
+   public void newGameButton()
+   {
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+   }
 
-    }
 }
