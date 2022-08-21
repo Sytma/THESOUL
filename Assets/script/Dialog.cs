@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class firstdialog : MonoBehaviour
+public class Dialog : MonoBehaviour
 {
     private Queue<string> sentences;
 
