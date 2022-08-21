@@ -4,24 +4,28 @@ using UnityEngine;
 using TMPro;
 public class Dialog2 : MonoBehaviour
 {
-    public TextMeshProUGUI TextDisplay;
-    public string sentences;
+    public TextMeshProUGUI textCompnent;
+    public string lines;
     private int index;
-    public float typingSpeed;
+    public float textSpeed;
 
     void Start()
     {
+        textCompnent.text = string.Empty;
+        StartDialogue();
+    }
+    void StartDialogue()
+    {
         index = 0;
-        StartCoroutine(Type());
+        StartCoroutine(TypeLine());
     }
 
-
-    IEnumerator Type()
+    IEnumerator TypeLine()
     {
-        foreach(char letter in sentences[index].ToCharArray())
+        foreach (char c in lines[index].ToCharArray())
         {
-            TextDisplay.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            textCompnent.text += c;
+            yield return new WaitForSeconds(textSpeed);
         }
     }
 }
