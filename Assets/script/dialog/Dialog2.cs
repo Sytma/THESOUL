@@ -8,7 +8,6 @@ public class Dialog2 : MonoBehaviour
     public string[] lines;
     private int index;
     public float textSpeed;
-    private char c;
     private int cindex = 0;
 
     void Start()
@@ -41,35 +40,30 @@ public class Dialog2 : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-       // Debug.Log(lines);
-
-        /*Debug.Log("IEnu..");
-        foreach (char c in lines[index].ToString())
+        if(cindex < lines[index].Length)
         {
-            Debug.Log("foreach");
-            textCompnent.text += c;
-            yield return new WaitForSeconds(textSpeed);*/
-        if(cindex < lines.Length)
-        {
-          //  Debug.Log(lines.Length);
-          //  Debug.Log(c);
-            c = lines.ToString()[cindex];
+            print(lines[index]);
+            char c = lines[index].ToString()[cindex];
             cindex++;
             textCompnent.text += c;
 
             yield return new WaitForSeconds(textSpeed);
 
             StartCoroutine("TypeLine");
+            Debug.Log(c);
         }
+
+        
 
 
     }
     void NextLine()
     {
-        if (cindex < lines.Length-1)
+        if (index < lines.Length-1)
         {
-            cindex++;
-            textCompnent.text += string.Empty;
+            textCompnent.text = string.Empty;
+            cindex = 0;
+            index++;
             StartCoroutine("TypeLine");
         }
         else
