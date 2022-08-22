@@ -12,6 +12,7 @@ public class trans: MonoBehaviour
     {
        
         transition.SetTrigger("start");
+        transition.SetTrigger("start2"); 
 
         yield return new WaitForSeconds(transitionTime);
 

@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class Dialog2 : MonoBehaviour
 {
+    public Animator transition;
     public TextMeshProUGUI textCompnent;
     public string[] lines;
     private int index;
     public float textSpeed;
     private int cindex = 0;
-
     void Start()
     {
         textCompnent.text = string.Empty;
@@ -40,13 +42,12 @@ public class Dialog2 : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        if(cindex < lines[index].Length)
+        if (cindex < lines[index].Length)
         {
             print(lines[index]);
             char c = lines[index].ToString()[cindex];
             cindex++;
             textCompnent.text += c;
-
             yield return new WaitForSeconds(textSpeed);
 
             StartCoroutine("TypeLine");
@@ -66,9 +67,10 @@ public class Dialog2 : MonoBehaviour
             index++;
             StartCoroutine("TypeLine");
         }
-        else
+        else 
         {
             gameObject.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
