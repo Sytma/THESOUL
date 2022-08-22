@@ -398,6 +398,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b50ff6071e489344970612aad380c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textCompnent: {fileID: 1614358117}
+  lines:
+  - aymen
+  - mosbah
+  - hi
+  - hi2
+  - hi3
+  - hi4
+  - hi5
+  - hi6
+  textSpeed: 0.3
 --- !u!4 &1611611240
 Transform:
   m_ObjectHideFlags: 0
