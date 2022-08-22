@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Dialog2 : MonoBehaviour
 {
     public Animator transition;
+    public int transitionTime;
     public TextMeshProUGUI textCompnent;
     public string[] lines;
     private int index;
@@ -54,7 +55,6 @@ public class Dialog2 : MonoBehaviour
             Debug.Log(c);
         }
 
-        
 
 
     }
@@ -70,7 +70,9 @@ public class Dialog2 : MonoBehaviour
         else 
         {
             gameObject.SetActive(false);
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }
