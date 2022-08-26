@@ -10,6 +10,10 @@ TagManager:
   - falldetector
   - nextLevel
   - previousLevel
+  - coint
+  - platform
+  - lava
+  - PORTAL
   layers:
   - Default
   - TransparentFX
